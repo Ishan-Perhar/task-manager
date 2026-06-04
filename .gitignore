@@ -32,3 +32,8 @@ build/
 
 # Docker
 postgres_data
+
+# virtual env
+venv/
+__pycache__/ 
+*.pyc
