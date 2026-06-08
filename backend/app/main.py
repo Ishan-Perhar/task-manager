@@ -1,8 +1,11 @@
 from fastapi import FastAPI
 
-app = FastAPI()
+from app.api.health import router as health_router
 
-@app.get("/")
-def root():
-    return{"message": "Task Manager API is running"}
+app = FastAPI(
+    title = "Task Manager API",
+    version = "1.0.0",
 
+)
+
+app.include_router(health_router)
